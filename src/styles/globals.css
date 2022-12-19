@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#messagesBox::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  @apply text-gray-100;
+  @apply bg-gray-900;
+  /* @apply pattern-crosses-gray-600/25; */
+  @apply pattern-hub-gray-600/25;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
