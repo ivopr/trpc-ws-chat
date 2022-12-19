@@ -86,7 +86,7 @@ function RoomPage() {
           <title>Identificação - SDChat</title>
         </Head>
         <form
-          className="flex flex-col gap-y-4 h-[100vh] items-center justify-center"
+          className="flex flex-col gap-y-4 absolute inset-0 items-center justify-center"
           onSubmit={(e) => {
             e.preventDefault();
 
@@ -95,7 +95,7 @@ function RoomPage() {
             });
           }}  
         >
-          <input type="text" className="block px-4 py-4 mt-2 text-xl placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50 w-72" data-primary="green-600" data-rounded="rounded-lg" placeholder="Seu Nome" value={nickname} onChange={e => setNickname(e.target.value)} />
+          <input type="text" className="block text-gray-600 px-4 py-4 mt-2 text-xl placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50 w-72" data-primary="green-600" data-rounded="rounded-lg" placeholder="Seu Nome" value={nickname} onChange={e => setNickname(e.target.value)} />
 
           <button
             className="relative rounded px-4 py-4 text-xl overflow-hidden group bg-green-500 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300 w-72 hover:ring-offset-gray-900"
@@ -176,7 +176,7 @@ function RoomPage() {
           }}
         >
           <input
-            className="block p-4 text-xl placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50 w-full"
+            className="block p-4 text-xl text-gray-600 placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50 w-full"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Digite..."

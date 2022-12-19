@@ -17,6 +17,7 @@ html {
   @apply bg-gray-900;
   /* @apply pattern-crosses-gray-600/25; */
   @apply pattern-hub-gray-600/25;
+  @apply absolute;
+  @apply inset-0;
   font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
 }
