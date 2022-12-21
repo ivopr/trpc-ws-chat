@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev:ws": "ts-node-dev --project tsconfig.server.json --respawn --transpile-only src/server/wsServer.ts",
-    "dev:next": "next dev",
+    "dev:next": "next dev -p 8081",
     "dev": "run-p dev:*",
     "build": "next build",
     "start": "next start",

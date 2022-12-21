@@ -21,7 +21,7 @@ function MessageItem({
   const liStyles =
     message.sender.name === session.user?.name
       ? baseStyles
-      : baseStyles.concat(" self-end bg-gray-300 text-white");
+      : baseStyles.concat(" self-end bg-gray-300 text-gray-700");
 
   return (
     <li className={liStyles}>
@@ -47,8 +47,6 @@ function RoomPage() {
   const roomId = query.roomId as string;
   const { data: session } = useSession();
   const [nickname, setNickname] = useState("");
-
-  const router = useRouter()
 
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
@@ -93,7 +91,7 @@ function RoomPage() {
             signIn("credentials", { name: nickname, redirect: false }).then(() => {
               setNickname("");
             });
-          }}  
+          }}
         >
           <input type="text" className="block text-gray-600 px-4 py-4 mt-2 text-xl placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-600 focus:ring-opacity-50 w-72" data-primary="green-600" data-rounded="rounded-lg" placeholder="Seu Nome" value={nickname} onChange={e => setNickname(e.target.value)} />
 
